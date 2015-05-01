@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Login</title>
+
+		<!-- BEGIN META -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="your,keywords">
+		<meta name="description" content="Short explanation about this website">
+		<!-- END META -->
+
+		<!-- BEGIN STYLESHEETS -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'/>
+		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/bootstrap.css?1422792965" />
+		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/materialadmin.css?1425466319" />
+		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/font-awesome.min.css?1422529194" />
+		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/material-design-iconic-font.min.css?1421434286" />
+		<!-- END STYLESHEETS -->
+		<script src="//www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+		<script src="js/underscore.js"></script>
+
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="../../assets/js/libs/utils/html5shiv.js?1403934957"></script>
+		<script type="text/javascript" src="../../assets/js/libs/utils/respond.min.js?1403934956"></script>
+		<![endif]-->
+	</head>
+	<body class="menubar-hoverable header-fixed ">
+		
+		<script>
+			Parse.initialize("jU8Coewco9JpSCbKOAlOhpjgjaZ8piG8HuUXoein", "DprEOeSj3pW0jTssXzbn0DxgcjkeNdcf8ePAyhvU");
+
+
+
+
+			function parseLogin()
+			{
+
+
+
+
+				Parse.FacebookUtils.logIn(null, {
+				  success: function(user) {
+				    if (!user.existed()) {
+				      alert("User signed up and logged in through Facebook!");
+				      window.location = "index.html";
+				    } else {
+				    	FB.api('/me', function(response) {
+							Parse.User.current().set("fbName", response.name);
+							alert("Test, you name is: " + response.name );
+					 			});
+				      alert("User logged in through Facebook!");
+				      window.location = "index.html";
+				    }
+				  },
+				  error: function(user, error) {
+				    alert("User cancelled the Facebook login or did not fully authorize.");
+				  }
+				});
+
+			}
+		  
+		  window.fbAsyncInit = function() {
+		    Parse.FacebookUtils.init({
+		      appId      : '401968003290275',
+		      status     : true,  // check Facebook Login status
+      		  cookie     : true,  // enable cookies to allow Parse to access the session
+		      xfbml      : true,
+		      version    : 'v2.3'
+		    });
+
+
+
+		  };
+
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+		</script>
+
+
+
+		<!-- BEGIN LOGIN SECTION -->
+		<section class="section-account">
+			<div class="img-backdrop" style="background-image: url('assets/img/img16.jpg')"></div>
+			<div class="spacer"></div>
+				<form class="login-form">
+					<div class="card contain-xs style-transparent">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-sm-12" >
+									<br><br>
+										<h3 class="text-lg text-bold text-primary " align="center">
+											DOOK
+										</h3>
+											<p>
+												<a id= "loginButton" href="#" onclick="parseLogin()" class="btn btn-block btn-raised btn-info"><i class="fa fa-facebook pull-left"></i>Login with Facebook</a>
+											</p>
+								</div>
+							</div>
+						</div>
+					</div><!--end .card -->
+				</form>
+				
+		</section>
+				<!-- END LOGIN SECTION -->
+
+
+				<!-- BEGIN JAVASCRIPT -->
+					
+
+				<script src="assets/js/libs/jquery/jquery-1.11.2.min.js"></script>
+				<script src="assets/js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
+				<script src="//www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+				<script src="assets/js/libs/bootstrap/bootstrap.min.js"></script>
+				<script src="assets/js/libs/spin.js/spin.min.js"></script>
+				<script src="assets/js/libs/autosize/jquery.autosize.min.js"></script>
+				<script src="assets/js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
+				<script src="assets/js/core/source/App.js"></script>
+				<script src="assets/js/core/source/AppNavigation.js"></script>
+				<script src="assets/js/core/source/AppOffcanvas.js"></script>
+				<script src="assets/js/core/source/AppCard.js"></script>
+				<script src="assets/js/core/source/AppForm.js"></script>
+				<script src="assets/js/core/source/AppNavSearch.js"></script>
+				<script src="assets/js/core/source/AppVendor.js"></script>
+				<script src="http://connect.facebook.net/en_US/all.js"></script>
+				<!-- <script src="assets/js/core/source/blog.js"></script> -->
+				<!-- <script src="assets/js/core/demo/Demo.js"></script> -->
+				<!-- END JAVASCRIPT -->
+
+			</body>
+		</html>
