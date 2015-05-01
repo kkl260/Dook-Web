@@ -1,1 +1,392 @@
-hello world
+<html lang="en">
+	<head>
+		<title>Dook</title>
+
+		<!-- BEGIN META -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="your,keywords">
+		<meta name="description" content="Short explanation about this website">
+
+		<link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'/>
+		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/bootstrap.css?1422792965" />
+		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/materialadmin.css?1425466319" />
+		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/font-awesome.min.css?1422529194" />
+		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/material-design-iconic-font.min.css?1421434286" />
+		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/rickshaw/rickshaw.css?1422792967" />
+		<link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/morris/morris.core.css?1420463396" />
+		<script src="//www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+		<script src="js/underscore.js"></script>
+		<!-- END STYLESHEETS -->
+
+		<!-- Additional CSS includes -->
+		
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="/assets/js/libs/utils/html5shiv.js"></script>
+		<script type="text/javascript" src="/assets/js/libs/utils/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body class="menubar-hoverable header-fixed ">
+		<!-- BODY content goes here ~ -->
+
+
+		<header id="header">
+			<div class="headerbar">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="headerbar-left">
+					<ul class="header-nav header-nav-options">
+						<li class="header-nav-brand" >
+							<div class="brand-holder">
+								<a href="index.html">
+									<span class="text-lg text-bold text-primary">DOOK</span>
+								</a>
+							</div>
+						</li>
+						<li>
+							<a class="btn btn-icon-toggle menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
+								<i class="fa fa-bars"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="headerbar-right">
+					
+					<ul class="header-nav header-nav-options">
+						<!-- notification panel -->
+						<li class="dropdown hidden-xs">
+							<a href="javascript:void(0);" class="btn btn-icon-toggle btn-default" data-toggle="dropdown">
+								<i class="fa fa-bell"></i><sup class="badge style-danger">4</sup>
+							</a>
+							<ul class="dropdown-menu animation-expand">
+								<li class="dropdown-header">Today's messages</li>
+								<li>
+									<a class="alert alert-callout alert-warning" href="javascript:void(0);">
+										<img class="pull-right img-circle dropdown-avatar" src="assets/img/avatar2.jpg?1404026449" alt="" />
+										<strong>Alex Anistor</strong><br/>
+										<small>Testing functionality...</small>
+									</a>
+								</li>
+								<li>
+									<a class="alert alert-callout alert-info" href="javascript:void(0);">
+										<img class="pull-right img-circle dropdown-avatar" src="assets/img/avatar3.jpg?1404026799" alt="" />
+										<strong>Alicia Adell</strong><br/>
+										<small>Reviewing last changes...</small>
+									</a>
+								</li>
+								<li class="dropdown-header">Options</li>
+								<li><a href="#">View all messages <span class="pull-right"><i class="fa fa-arrow-right"></i></span></a></li>
+								<li><a href="#">Mark as read <span class="pull-right"><i class="fa fa-arrow-right"></i></span></a></li>
+							</ul><!--end .dropdown-menu -->
+						</li><!--end .dropdown -->
+					
+					</ul><!--end .header-nav-options -->
+
+					<!-- Profile dropdown -->
+					<ul class="header-nav header-nav-profile">
+						<li class="dropdown">
+							<a href="javascript:void(0);" class="dropdown-toggle ink-reaction" data-toggle="dropdown">
+								<!-- Profile picture goes here -->
+								<img src="assets/img/avatar1.jpg?1403934956" alt="" />
+								<span class="profile-info">
+									Profile Name
+									<small>Secondary</small>
+								</span>
+							</a>
+							<ul class="dropdown-menu animation-dock">
+								<li class="dropdown-header">Config</li>
+								<li><a href="#">My profile</a></li> <!-- href should link to profile page html ex. profile.html ... same with logout -->
+								
+								<li class="divider"></li>
+								
+								<li><a href="#" onclick="parseLogout()"><i class="fa fa-fw fa-power-off text-danger"></i> Logout</a></li>
+							</ul><!--end .dropdown-menu -->
+						</li><!--end .dropdown -->
+					</ul><!--end .header-nav-profile -->
+					<ul class="header-nav header-nav-toggle">
+						<li>
+							<a class="btn btn-icon-toggle btn-default" href="#offcanvas-search" data-toggle="offcanvas" data-backdrop="false">
+								<i class="fa fa-ellipsis-v"></i>
+							</a>
+						</li>
+					</ul><!--end .header-nav-toggle -->
+				</div><!--end #header-navbar-collapse -->
+			</div>
+
+		</header>
+
+		<div id="base">
+
+			<div class="offcanvas">
+			</div>
+
+
+			<div id="content">
+
+						<!-- BEGIN FULL-BLEED DIVIDERS -->
+						<div class="row">
+
+							<div class="col-lg-offset-1 col-md-8">
+								<div class="card">
+									<div class="card-body no-padding">
+										<ul class="list divider-full-bleed">
+											<li class="tile">
+												<a class="tile-content ink-reaction">
+													<div class="tile-text" id="sport1">
+														Sport
+														<small>
+															Location
+														</small>
+													</div>
+													<div class="title-text" id="date1">
+														Date
+														<small>
+															Time
+														</small>
+													</div>
+													<div class="tile-icon">
+														<img src="assets/img/avatar9.jpg?1404026744" alt="" />
+													</div>
+												</a>
+											</li>
+											<li class="tile">
+												<a class="tile-content ink-reaction">
+													<div class="tile-text" id="sport2">
+														Sport
+														<small>
+															Location
+														</small>
+													</div>
+													<div class="title-text" id="date2">
+														Date
+														<small>
+															Time
+														</small>
+													</div>
+													<div class="tile-icon">
+														<img src="assets/img/avatar9.jpg?1404026744" alt="" />
+													</div>
+												</a>
+											</li>
+											<li class="tile">
+												<a class="tile-content ink-reaction">
+													<div class="tile-text" id="sport3">
+														Sport
+														<small>
+															Location
+														</small>
+													</div>
+													<div class="title-text" id="date3">
+														Date
+														<small>
+															Time
+														</small>
+													</div>
+													<div class="tile-icon">
+														<img src="assets/img/avatar9.jpg?1404026744" alt="" />
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div><!--end .card-body -->
+								</div><!--end .card -->
+							</div><!--end .col -->
+						</div><!--end .row -->
+						<!-- END FULL-BLEED DIVIDERS -->
+			</div>
+
+
+
+			<!-- BEGIN MENUBAR-->
+			<div id="menubar" class="menubar-inverse ">
+				
+				<div class="menubar-fixed-panel">
+					<div>
+						<a class="btn btn-icon-toggle btn-default menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
+							<i class="fa fa-bars"></i>
+						</a>
+					</div>
+					<div class="expanded">
+						<a href="index.html">
+							<span class="text-lg text-bold text-primary ">DOOK</span>
+						</a>
+					</div>
+				</div>
+
+				<div class="menubar-scroll-panel">
+
+					<!-- BEGIN MAIN MENU -->
+					<ul id="main-menu" class="gui-controls">
+
+						<!-- BEGIN DASHBOARD -->
+						<li>
+							<a href="index.html" class="active">
+								<div class="gui-icon"><i class="md md-home"></i></div>
+								<span class="title">Dashboard</span>
+							</a>
+						</li><!--end /menu-li -->
+						<!-- END DASHBOARD -->
+
+
+
+						<!-- BEGIN Search -->
+						<li>
+							<a href="#" >
+								<div class="gui-icon"><i class="md md-search"></i></div>
+								<span class="title">Search Games</span>
+							</a>
+						</li><!--end /menu-li -->
+						<!-- END Search -->
+
+						<div></div>
+
+						<!-- BEGIN Create -->
+						<li>
+							<a href="#" >
+								<div class="gui-icon"><i class="md md-add-circle-outline"></i></div>
+								<span class="title">Create A Game</span>
+							</a>
+						</li><!--end /menu-li -->
+						<!-- END Create -->
+
+						
+
+					</ul><!--end .main-menu -->
+					<!-- END MAIN MENU -->
+					
+					<div class="menubar-foot-panel">
+						<small class="no-linebreak hidden-folded">
+							<span class="opacity-75">Copyright &copy; 2014</span> <strong>K2 Apps</strong>
+						</small>
+					</div>
+				</div><!--end .menubar-scroll-panel-->
+			</div><!--end #menubar-->
+			<!-- END MENUBAR -->
+
+
+
+			<div class="offcanvas">
+			</div>
+
+		</div>
+
+
+		<script>
+			Parse.initialize("jU8Coewco9JpSCbKOAlOhpjgjaZ8piG8HuUXoein", "DprEOeSj3pW0jTssXzbn0DxgcjkeNdcf8ePAyhvU");
+
+			var currentUser = Parse.User.current();
+				if (currentUser) {
+				    // do stuff with the user
+				    var userID = currentUser.id;
+				} else {
+				    // show the signup or login page
+				    window.location = "login.html";
+				}
+
+
+
+			var Games = Parse.Object.extend("NewGame");
+			var query = new Parse.Query(Games);
+			query.equalTo("players", Parse.User.current().id);
+			query.find({
+			  success: function(results) {
+			    //alert("Successfully retrieved " + results.length + " scores.");
+			    // Do something with the returned Parse.Object values
+			    for (var i = 0; i < results.length; i++) { 
+			      //var game = results[i];
+			      // alert(game.id + ' - ' + game.get('sport'));
+			      var game1 = results[0];
+			      var game2 = results[1];
+			      var game3 = results[2];
+			    }
+			    var gameSport = game1.get('sport');
+			    var gameDate = game1.get('date');
+			    document.getElementById("sport1").innerHTML = gameSport; 
+			    document.getElementById("date1").innerHTML = gameDate; 
+
+			    var gameSport2 = game2.get('sport');
+			    var gameDate2 = game2.get('date');
+			    document.getElementById("sport2").innerHTML = gameSport2; 
+			    document.getElementById("date2").innerHTML = gameDate2; 
+
+			    var gameSport3 = game3.get('sport');
+			    var gameDate3 = game3.get('date');
+			    document.getElementById("sport3").innerHTML = gameSport3; 
+			    document.getElementById("date3").innerHTML = gameDate3; 
+
+
+			  },
+			  error: function(error) {
+			    alert("No Games Found");
+			  }
+			});
+
+			function parseLogout(){
+				Parse.User.logOut();
+				alert("User Logged out");
+				window.location = "login.html";
+				var currentUser = Parse.User.current(); 
+			}
+
+
+		  
+		  window.fbAsyncInit = function() {
+		    Parse.FacebookUtils.init({
+		      appId      : '401968003290275',
+		      status     : true,  // check Facebook Login status
+      		  cookie     : true,  // enable cookies to allow Parse to access the session
+		      xfbml      : true,
+		      version    : 'v2.3'
+		    });
+
+
+
+		  };
+
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+		</script>
+
+
+
+		<!-- BEGIN JAVASCRIPT -->
+		<script src="assets/js/libs/jquery/jquery-1.11.2.min.js"></script>
+		<script src="assets/js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
+		<script src="assets/js/libs/bootstrap/bootstrap.min.js"></script>
+		<script src="//www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+		<script src="assets/js/libs/spin.js/spin.min.js"></script>
+		<script src="assets/js/libs/autosize/jquery.autosize.min.js"></script>
+		<script src="assets/js/libs/moment/moment.min.js"></script>
+		<script src="assets/js/libs/flot/jquery.flot.min.js"></script>
+		<script src="assets/js/libs/flot/jquery.flot.time.min.js"></script>
+		<script src="assets/js/libs/flot/jquery.flot.resize.min.js"></script>
+		<script src="assets/js/libs/flot/jquery.flot.orderBars.js"></script>
+		<script src="assets/js/libs/flot/jquery.flot.pie.js"></script>
+		<script src="assets/js/libs/flot/curvedLines.js"></script>
+		<script src="assets/js/libs/jquery-knob/jquery.knob.min.js"></script>
+		<script src="assets/js/libs/sparkline/jquery.sparkline.min.js"></script>
+		<script src="assets/js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
+		<script src="assets/js/libs/d3/d3.min.js"></script>
+		<script src="assets/js/libs/d3/d3.v3.js"></script>
+		<script src="assets/js/libs/rickshaw/rickshaw.min.js"></script>
+		<script src="assets/js/core/source/AppNavigation.js"></script>
+		<script src="assets/js/core/source/AppOffcanvas.js"></script>
+		<script src="assets/js/core/source/AppCard.js"></script>
+		<script src="assets/js/core/source/AppForm.js"></script>
+		<script src="assets/js/core/source/AppNavSearch.js"></script>
+		<script src="assets/js/core/source/blog.js"></script>
+		<script src="assets/js/core/source/App.js"></script>
+		<!-- END JAVASCRIPT -->
+	</body>
+</html>
